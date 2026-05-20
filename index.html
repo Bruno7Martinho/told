@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toldos Siwinski | 40 Anos de Tradição e Proteção Solar</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            siwinski: {
+              orange: '#f37021',   // Laranja Oficial
+              yellow: '#fab814',   // Amarelo Dourado
+              dark: '#0e0e10',     // Preto Carbono
+              slate: '#1e2025',    // Grafite Escuro
+              light: '#f8fafc'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .glow-orange {
+      box-shadow: 0 0 20px rgba(243, 112, 33, 0.25);
+    }
+
+    .bg-carbon {
+      background-color: #0e0e10;
+      background-image: radial-gradient(#1f2127 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    .scallop-divider {
+      background-image: radial-gradient(circle at 10px -5px, transparent 12px, #f37021 13px);
+      background-size: 20px 20px;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans antialiased overflow-x-hidden">
+
+  <!-- HEADER / NAVIGATION -->
+  <header
+    class="fixed w-full top-0 z-50 bg-siwinski-dark/95 backdrop-blur-md border-b border-white/5 transition-all duration-300"
+    id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo Oficial Customizado por Vetor SVG -->
+        <a href="#inicio" class="flex items-center space-x-3 group">
+          <div
+            class="relative w-12 h-12 rounded-full flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105">
+            <img src="img/logo.png" alt="">
+            <div
+              class="absolute bottom-0 inset-x-0 bg-siwinski-dark text-[7px] text-center text-siwinski-yellow font-extrabold py-0.5">
+              40 ANOS</div>
+          </div>
+          <div>
+            <span class="font-bold text-lg sm:text-xl tracking-wide text-white block font-sans">TOLDOS <span
+                class="text-siwinski-orange">SIWINSKI</span></span>
+            <span class="text-[9px] uppercase tracking-[0.25em] text-siwinski-yellow block -mt-1 font-semibold">São
+              Leopoldo - RS</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
+          <a href="#inicio"
+            class="text-xs lg:text-sm font-medium text-gray-300 hover:text-siwinski-orange transition-colors">Início</a>
+          <a href="#portfolio"
+            class="text-xs lg:text-sm font-medium text-gray-300 hover:text-siwinski-orange transition-colors">Nossos
+            Toldos</a>
+          <a href="#antes-depois"
+            class="text-xs lg:text-sm font-medium text-gray-300 hover:text-siwinski-orange transition-colors">Antes &
+            Depois</a>
+          <a href="#calculadora"
+            class="text-xs lg:text-sm font-medium text-gray-300 hover:text-siwinski-orange transition-colors">Simulador</a>
+          <a href="#sobre"
+            class="text-xs lg:text-sm font-medium text-gray-300 hover:text-siwinski-orange transition-colors">Sobre
+            Nós</a>
+        </nav>
+
+        <!-- Phone and WhatsApp Contact Header -->
+        <div class="hidden sm:flex items-center space-x-4">
+          <div class="text-right">
+            <span class="block text-[10px] text-gray-400 uppercase tracking-widest">Fale Conosco</span>
+            <a href="tel:51993629386"
+              class="text-sm font-bold text-white hover:text-siwinski-orange transition-colors">(51) 99362-9386</a>
+          </div>
+          <a href="https://wa.me/5551993629386?text=Ol%C3%A1!%20Vi%20a%20landing%20page%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+            target="_blank"
+            class="bg-siwinski-orange hover:bg-siwinski-orange/90 text-white font-bold px-5 py-2.5 rounded-xl shadow-lg shadow-siwinski-orange/20 transition-all duration-300 hover:scale-105 flex items-center space-x-2 text-sm">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Orçamento Rápido</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="md:hidden text-white hover:text-siwinski-orange focus:outline-none p-2">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenu" class="hidden md:hidden bg-siwinski-dark border-t border-white/10 transition-all duration-300">
+      <div class="px-4 pt-2 pb-6 space-y-3">
+        <a href="#inicio" class="block text-gray-300 hover:text-white py-2 font-medium">Início</a>
+        <a href="#portfolio" class="block text-gray-300 hover:text-white py-2 font-medium">Nossos Toldos</a>
+        <a href="#antes-depois" class="block text-gray-300 hover:text-white py-2 font-medium">Antes & Depois</a>
+        <a href="#calculadora" class="block text-gray-300 hover:text-white py-2 font-medium">Simulador</a>
+        <a href="#sobre" class="block text-gray-300 hover:text-white py-2 font-medium">Sobre Nós</a>
+        <div class="pt-4 border-t border-slate-800 space-y-3">
+          <p class="text-xs text-center text-gray-400">Rua Alberto Bins, 366 - São Leopoldo</p>
+          <a href="https://wa.me/5551993629386?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+            target="_blank"
+            class="w-full bg-[#25D366] text-white text-center font-bold py-3.5 rounded-xl flex items-center justify-center space-x-2">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>WhatsApp (51) 99362-9386</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="inicio" class="bg-carbon min-h-screen flex items-center pt-24 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-t from-siwinski-dark via-siwinski-dark/80 to-transparent z-10"></div>
+
+    <!-- Abstract Awning Line in Background -->
+    <div class="absolute right-0 top-0 h-full w-1/2 opacity-10 hidden lg:block z-0">
+      <svg viewBox="0 0 100 100" class="w-full h-full fill-siwinski-orange">
+        <path d="M0,30 Q50,0 100,30 L100,100 L0,100 Z"></path>
+      </svg>
+    </div>
+
+    <div
+      class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-20 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+      <div class="lg:col-span-7 space-y-6">
+        <!-- Badges -->
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="inline-flex items-center space-x-2 bg-siwinski-orange/10 border border-siwinski-orange/30 px-3.5 py-1.5 rounded-full text-siwinski-orange text-xs font-bold tracking-wider uppercase">
+            <i class="fa-solid fa-star text-siwinski-yellow animate-spin-slow"></i>
+            <span>TOP OF MIND SÃO LEOPOLDO</span>
+          </span>
+          <span
+            class="inline-flex items-center space-x-2 bg-siwinski-yellow/10 border border-siwinski-yellow/30 px-3.5 py-1.5 rounded-full text-siwinski-yellow text-xs font-bold tracking-wider uppercase">
+            <span>40 ANOS DE TRADIÇÃO</span>
+          </span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+          Criamos espaços amplos e <span class="text-siwinski-orange">cobertos</span> com toldos sob medida.
+        </h1>
+
+        <p class="text-gray-300 text-lg sm:text-xl max-w-xl font-light leading-relaxed">
+          Sua varanda, piscina, garagem ou motorhome com o máximo de conforto térmico e elegância que só a marca líder
+          de São Leopoldo e região proporciona.
+        </p>
+
+        <!-- Hero Grid Highlights (Real Instagram Specs) -->
+        <div class="grid grid-cols-3 gap-4 py-4 max-w-md border-y border-white/10">
+          <div class="text-center sm:text-left">
+            <span class="block text-siwinski-orange font-extrabold text-2xl sm:text-3xl">40 Anos</span>
+            <span class="block text-gray-400 text-xs sm:text-sm">Tradição & Confiança</span>
+          </div>
+          <div class="text-center sm:text-left border-x border-white/10 px-4">
+            <span class="block text-siwinski-yellow font-extrabold text-2xl sm:text-3xl">Brasil</span>
+            <span class="block text-gray-400 text-xs sm:text-sm">Envio p/ todo País</span>
+          </div>
+          <div class="text-center sm:text-left">
+            <span class="block text-white font-extrabold text-2xl sm:text-3xl">100%</span>
+            <span class="block text-gray-400 text-xs sm:text-sm">Sob Medida</span>
+          </div>
+        </div>
+
+        <!-- CTA Actions -->
+        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+          <a href="#calculadora"
+            class="bg-siwinski-orange hover:bg-siwinski-orange/90 text-white text-center font-bold px-8 py-4.5 rounded-xl shadow-xl shadow-siwinski-orange/20 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center space-x-3 text-sm">
+            <i class="fa-solid fa-calculator"></i>
+            <span>Simular Meu Projeto</span>
+          </a>
+          <a href="https://wa.me/5551993629386?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20vendedor%20sobre%20toldos."
+            target="_blank"
+            class="bg-transparent hover:bg-white/5 text-white text-center font-semibold px-8 py-4.5 rounded-xl border border-white/20 transition-all duration-300 flex items-center justify-center space-x-2 text-sm">
+            <i class="fa-brands fa-whatsapp text-lg text-green-500"></i>
+            <span>Falar com Vendedor</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Lead Card (With Photo Representation of Motorhome/Van awning) -->
+      <div class="lg:col-span-5">
+        <div
+          class="bg-siwinski-slate/85 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden shadow-2xl relative">
+
+          <!-- Cover Photo (Based on real Motorhome/Van awning from images) -->
+          <div class="h-48 relative overflow-hidden">
+            <img src="img/equipe.jpeg" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-siwinski-slate to-transparent"></div>
+
+          </div>
+
+          <div class="p-6 sm:p-8 space-y-4">
+            <h3 class="text-xl font-bold text-white flex items-center space-x-2">
+              <i class="fa-solid fa-envelope text-siwinski-orange"></i>
+              <span>Projeto Sob Medida para Seu Espaço</span>
+            </h3>
+            <p class="text-xs text-gray-400">Realizamos a medição no local para garantir acabamento perfeito.</p>
+
+            <form id="heroLeadForm" class="space-y-4" onsubmit="handleLeadSubmit(event)">
+              <div>
+                <input type="text" id="leadName" required placeholder="Seu Nome completo"
+                  class="w-full bg-siwinski-dark/60 border border-white/15 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-siwinski-orange transition-colors">
+              </div>
+              
+              <div>
+                <select id="leadProduct"
+                  class="w-full bg-siwinski-dark/80 border border-white/15 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-siwinski-orange transition-colors">
+                  <option value="Toldo de Lona Retrátil">Toldo Cortina em Lona (Visor Transparente)</option>
+                  <option value="Toldo para Motorhome / Van">Toldo Sob Medida para Motorhome / Van</option>
+                  <option value="Toldo Fixo Curvo / Capota">Toldo Fixo Curvo / Capota Decorativa</option>
+                  <option value="Cobertura em Policarbonato">Cobertura de Policarbonato / Telha</option>
+                </select>
+              </div>
+              <button type="submit"
+                class="w-full bg-siwinski-orange hover:bg-siwinski-orange/90 text-white font-bold py-3.5 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2">
+                <span>Solicitar Orçamento</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUCCESS POPUP MODAL -->
+  <div id="successModal" class="fixed inset-0 bg-siwinski-dark/80 z-50 flex items-center justify-center p-4 hidden">
+    <div
+      class="bg-white rounded-3xl max-w-md w-full p-8 text-center shadow-2xl border border-siwinski-orange/20 transform transition-all duration-300">
+      <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+        <i class="fa-solid fa-check text-green-600 text-3xl"></i>
+      </div>
+      <h4 class="text-2xl font-bold text-siwinski-dark mb-2">Mensagem Enviada!</h4>
+      <p class="text-gray-600 text-sm mb-6" id="modalMessage">Agradecemos o contato. Nossa equipe técnica da Toldos
+        Siwinski entrará em contato em breve via WhatsApp.</p>
+      <button onclick="closeModal()"
+        class="w-full bg-siwinski-dark hover:bg-siwinski-slate text-white font-bold py-3.5 rounded-xl transition-colors">
+        Fechar
+      </button>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO INTERATIVO (Direct match of user images) -->
+  <section id="portfolio" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-siwinski-orange font-bold text-sm tracking-widest uppercase block">Nosso Trabalho Real</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-siwinski-dark">
+          Especialistas em Soluções em Toldos
+        </h2>
+        <p class="text-slate-600 text-lg">
+          Confira as fotos reais de projetos executados pela nossa equipe em São Leopoldo e região metropolitana.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="flex flex-wrap justify-center gap-2 mb-12">
+        <button onclick="filterPhotos('all')"
+          class="photo-filter-btn active bg-siwinski-orange text-white px-5 py-2.5 rounded-xl text-sm font-bold transition-all"
+          id="btn-all">Todos</button>
+        <button onclick="filterPhotos('lona')"
+          class="photo-filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-5 py-2.5 rounded-xl text-sm font-bold transition-all"
+          id="btn-lona">Em Lona Cortina</button>
+        <button onclick="filterPhotos('motorhome')"
+          class="photo-filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-5 py-2.5 rounded-xl text-sm font-bold transition-all"
+          id="btn-motorhome">Motorhome & Van</button>
+        <button onclick="filterPhotos('fixos')"
+          class="photo-filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-5 py-2.5 rounded-xl text-sm font-bold transition-all"
+          id="btn-fixos">Fixos & Capotas</button>
+        <button onclick="filterPhotos('policarbonato')"
+          class="photo-filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-5 py-2.5 rounded-xl text-sm font-bold transition-all"
+          id="btn-policarbonato">Policarbonato & Outros</button>
+      </div>
+
+      <!-- Photo Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="photoGrid">
+
+        <!-- Card 1: Toldo Cortina com Visor (Ref Image 3 & 5) -->
+        <div
+          class="photo-card bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/60 shadow-md group transition-all duration-300 hover:shadow-xl"
+          data-category="lona">
+          <div class="h-64 relative overflow-hidden">
+            <img src="img/img2.jpeg" alt="Toldo de lona cinza com visor para quiosque de piscina"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span
+              class="absolute bottom-4 left-4 bg-siwinski-dark/90 backdrop-blur-md text-siwinski-orange font-bold text-xs px-3 py-1 rounded-lg">Visor
+              Transparente</span>
+          </div>
+          <div class="p-6">
+            <h4 class="font-bold text-xl text-slate-900 mb-2">Toldo Cortina com Visor</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Lona cinza ultra resistente com visor transparente centralizado, perfeito para fechamento de quiosques de
+              piscina e áreas de lazer, protegendo do vento e chuva.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2: Capota Ondulada Clássica (Ref Image 4) -->
+        <div
+          class="photo-card bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/60 shadow-md group transition-all duration-300 hover:shadow-xl"
+          data-category="fixos">
+          <div class="h-64 relative overflow-hidden">
+            <img src="img/img6.jpeg" alt="Toldo fixo capota com babado ondulado"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span
+              class="absolute bottom-4 left-4 bg-siwinski-dark/90 backdrop-blur-md text-siwinski-orange font-bold text-xs px-3 py-1 rounded-lg">Fixo
+              / Clássico</span>
+          </div>
+          <div class="p-6">
+            <h4 class="font-bold text-xl text-slate-900 mb-2">Toldo Fixo Capota Ondulado</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Acabamento clássico decorativo com lona de alta resistência e babado com ondulação premium. Excelente para
+              portas de residências e comércios em geral.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3: Toldo para Motorhome (Ref Image 1 & 2) -->
+        <div
+          class="photo-card bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/60 shadow-md group transition-all duration-300 hover:shadow-xl"
+          data-category="motorhome">
+          <div class="h-64 relative overflow-hidden">
+            <img src="img/imgvan.jpeg" alt="Toldo retrátil instalado em van motorhome"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span
+              class="absolute bottom-4 left-4 bg-siwinski-dark/90 backdrop-blur-md text-siwinski-orange font-bold text-xs px-3 py-1 rounded-lg">Motorhome
+              / Van</span>
+          </div>
+          <div class="p-6">
+            <h4 class="font-bold text-xl text-slate-900 mb-2">Toldo de Lona Retrátil para Vans</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Solução leve e funcional sob medida para motorhomes, kombis e vans comerciais. Feito para aguentar as
+              estradas com facilidade de acionamento por manivela.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4: Toldo Cortina Creme Completo (Ref Image 6, 7 & 8) -->
+        <div
+          class="photo-card bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/60 shadow-md group transition-all duration-300 hover:shadow-xl"
+          data-category="lona">
+          <div class="h-64 relative overflow-hidden">
+            <img src="img/img4.jpeg" alt="Varanda gourmet fechada com toldo de lona creme"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span
+              class="absolute bottom-4 left-4 bg-siwinski-dark/90 backdrop-blur-md text-siwinski-orange font-bold text-xs px-3 py-1 rounded-lg">Fechamento
+              de Sacada</span>
+          </div>
+          <div class="p-6">
+            <h4 class="font-bold text-xl text-slate-900 mb-2">Fechamento Cortina Creme</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Cortinas verticais em lona creme de altíssima qualidade com visores integrados. Ideal para manter sua área
+              de churrasco protegida e limpa, livre de intempéries.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 5: Cobertura Arqueada de Policarbonato (Ref Image 9) -->
+        <div
+          class="photo-card bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/60 shadow-md group transition-all duration-300 hover:shadow-xl"
+          data-category="policarbonato">
+          <div class="h-64 relative overflow-hidden">
+            <img src="img/img1.jpeg" alt="Cobertura arqueada de garagem de policarbonato"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span
+              class="absolute bottom-4 left-4 bg-siwinski-dark/90 backdrop-blur-md text-siwinski-orange font-bold text-xs px-3 py-1 rounded-lg">Garagem
+              / Entrada</span>
+          </div>
+          <div class="p-6">
+            <h4 class="font-bold text-xl text-slate-900 mb-2">Cobertura Arqueada Robusta</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Cobertura de policarbonato alveolar ou telha translúcida montada sobre perfis metálicos curvados de
+              altíssima resistência para proteger carros e passarelas.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ANTES E DEPOIS INTERATIVO (Ref Image 6 e 7 - Balcony open vs closed) -->
+  <section id="antes-depois" class="py-24 bg-siwinski-dark text-white relative">
+    <div class="absolute inset-0 bg-carbon opacity-40"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-siwinski-orange font-bold text-sm tracking-widest uppercase block">Compare o Conforto</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold">O Poder de Fechamento de Nossos Toldos</h2>
+        <p class="text-gray-400">Arraste para o lado e veja a diferença que o fechamento lateral com toldo de lona creme
+          faz em sua varanda .</p>
+      </div>
+
+      <!-- Interactive Slider UI -->
+      <div class="max-w-4xl mx-auto bg-siwinski-slate p-4 rounded-3xl border border-white/10 shadow-2xl">
+        <div class="relative overflow-hidden rounded-2xl h-[450px]" id="sliderContainer">
+
+          <!-- Before Image -->
+          <div class="absolute inset-0 w-full h-full overflow-hidden">
+            <img src="img/img4.jpeg" class="w-full h-full object-cover scale-90 origin-center">
+
+            <div
+              class="absolute top-4 left-4 bg-siwinski-dark/80 backdrop-blur-md text-white font-bold text-xs px-3 py-1 rounded-lg">
+              Varanda Aberta (Chuva/Sol Forte)
+            </div>
+          </div>
+
+          <!-- After Image -->
+          <div class="absolute inset-0 h-full overflow-hidden" id="afterImageContainer" style="width: 50%;">
+
+            <img src="img/imgfechada.jpeg" alt="Varanda Gourmet Protegida com Toldo Creme"
+              class="absolute inset-0 w-full h-full object-cover scale-90 origin-center">
+
+            <div
+              class="absolute top-4 right-4 bg-siwinski-orange text-white font-bold text-xs px-3 py-1 rounded-lg z-20 whitespace-nowrap">
+              Com Toldo Siwinski Instalado
+            </div>
+          </div>
+        </div>
+
+        <!-- Touch Device Hint -->
+        <p class="text-center text-xs text-gray-400 mt-4"><i
+            class="fa-solid fa-hand-pointer text-siwinski-orange mr-1"></i> Arraste ou clique na imagem acima para ver o
+          efeito do toldo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULADOR DE ORÇAMENTO EM TEMPO REAL -->
+  <section id="calculadora" class="py-24 bg-siwinski-light relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Info Section -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-siwinski-orange font-bold text-sm tracking-widest uppercase block">Transparência
+            Garantida</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-siwinski-dark leading-tight">
+            Simulador de Valores de Referência
+          </h2>
+          <p class="text-slate-600">
+            Buscando agilizar seu orçamento, preparamos uma calculadora inteligente com base na metragem aproximada do
+            seu espaço. Calcule e envie os dados direto para nosso WhatsApp de São Leopoldo.
+          </p>
+
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-shield-halved text-2xl text-siwinski-orange"></i>
+              <span class="text-slate-700 font-semibold text-sm">Estruturas reforçadas de ferro ou alumínio</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-truck-ramp-box text-2xl text-siwinski-orange"></i>
+              <span class="text-slate-700 font-semibold text-sm">Instalação e frete sob consulta para todo RS</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-file-invoice-dollar text-2xl text-siwinski-orange"></i>
+              <span class="text-slate-700 font-semibold text-sm">Melhor custo-benefício garantido por quem
+                fabrica</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calculator Container -->
+        <div class="lg:col-span-7">
+          <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-2xl">
+            <h3 class="text-xl font-extrabold text-siwinski-dark mb-6 flex items-center space-x-2">
+              <i class="fa-solid fa-calculator text-siwinski-orange"></i>
+              <span>Escolha as Medidas & Modelo</span>
+            </h3>
+
+            <div class="space-y-6">
+              <!-- Tipo de Toldo -->
+              <div>
+                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">1. Escolha a
+                  Categoria</label>
+                <div class="grid grid-cols-2 gap-3">
+                  <button onclick="setCalcCategory('cortina', 190)"
+                    class="calc-type-btn active bg-siwinski-orange text-white border-siwinski-orange p-3.5 rounded-xl border-2 text-left transition-all duration-300">
+                    <span class="font-bold text-sm block">Toldo Cortina Lona</span>
+                    <span class="text-[10px] opacity-80">R$ 190/m²</span>
+                  </button>
+                  <button onclick="setCalcCategory('motorhome', 350)"
+                    class="calc-type-btn bg-slate-50 text-slate-700 border-slate-200 hover:border-slate-300 p-3.5 rounded-xl border-2 text-left transition-all duration-300">
+                    <span class="font-bold text-sm block">Toldo p/ Motorhome</span>
+                    <span class="text-[10px] opacity-80">R$ 350/m²</span>
+                  </button>
+                  <button onclick="setCalcCategory('fixo_capota', 260)"
+                    class="calc-type-btn bg-slate-50 text-slate-700 border-slate-200 hover:border-slate-300 p-3.5 rounded-xl border-2 text-left transition-all duration-300">
+                    <span class="font-bold text-sm block">Fixo / Capota</span>
+                    <span class="text-[10px] opacity-80">R$ 260/m²</span>
+                  </button>
+                  <button onclick="setCalcCategory('policarbonato', 520)"
+                    class="calc-type-btn bg-slate-50 text-slate-700 border-slate-200 hover:border-slate-300 p-3.5 rounded-xl border-2 text-left transition-all duration-300">
+                    <span class="font-bold text-sm block">Policarbonato Fixo</span>
+                    <span class="text-[10px] opacity-80">R$ 520/m²</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Medidas -->
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">2. Largura
+                    (Metros)</label>
+                  <input type="number" id="calcWidth" step="0.1" value="3.5" oninput="calculatePrice()"
+                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 font-bold focus:outline-none focus:border-siwinski-orange">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">3. Altura / Avanço
+                    (Metros)</label>
+                  <input type="number" id="calcHeight" step="0.1" value="2.2" oninput="calculatePrice()"
+                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 font-bold focus:outline-none focus:border-siwinski-orange">
+                </div>
+              </div>
+
+              <!-- Extras -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">4. Tipo de Visor /
+                    Material</label>
+                  <select id="calcFinish" onchange="calculatePrice()"
+                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 font-semibold text-slate-700 focus:outline-none focus:border-siwinski-orange">
+                    <option value="padrao">Lona Premium de Alta Vedação</option>
+                    <option value="com_visor">Com Visor Transparente (+ R$ 150)</option>
+                    <option value="tela_screen">Tela Microperfurada Solar (+ 30%)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">5. Tipo de
+                    Estrutura</label>
+                  <select id="calcStructure" onchange="calculatePrice()"
+                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 font-semibold text-slate-700 focus:outline-none focus:border-siwinski-orange">
+                    <option value="ferro">Estrutura de Aço Galvanizado</option>
+                    <option value="aluminio">Estrutura de Alumínio Anodizado (+ R$ 450)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Display Results -->
+              <div class="bg-siwinski-dark text-white rounded-2xl p-6 space-y-4">
+                <div class="flex justify-between items-center text-sm text-gray-400">
+                  <span>Área Calculada:</span>
+                  <span class="font-bold text-white text-base" id="calcAreaDisplay">7.70 m²</span>
+                </div>
+                <div class="border-t border-white/5 pt-3 flex justify-between items-end">
+                  <div>
+                    <span class="text-xs text-gray-400 uppercase tracking-wider block">Valor de Referência</span>
+                    <span class="text-[10px] text-siwinski-orange block font-semibold">*Pode variar sob análise do
+                      local</span>
+                  </div>
+                  <div class="text-right">
+                    <span class="block text-3xl font-extrabold text-siwinski-orange" id="calcPriceDisplay">R$
+                      1.463,00</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Send to Whatsapp -->
+              <button onclick="sendCalcToWhatsapp()"
+                class="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-4 rounded-xl transition-all duration-300 flex items-center justify-center space-x-3 shadow-lg shadow-emerald-500/20">
+                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                <span>Solicitar este Projeto via WhatsApp</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TRADIÇÃO / SOBRE NÓS (40 Anos de Tradição) -->
+  <section id="sobre" class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <!-- Chief Silhouette graphic representation to match "O mundo sem limites" design -->
+        <div class="relative flex justify-center">
+          <div class="absolute -top-10 -left-10 w-40 h-40 bg-siwinski-orange/10 rounded-full blur-3xl"></div>
+          <div
+            class="relative bg-siwinski-dark border-4 border-siwinski-orange p-10 rounded-full w-72 h-72 sm:w-96 sm:h-96 flex flex-col items-center justify-center text-center shadow-2xl">
+            <!-- Pinned Circle Style Logo -->
+
+            <img src="img/logo.png">
+
+            <p class="text-[11px] sm:text-xs text-gray-400 tracking-wider uppercase mt-1">40 Anos de Qualidade</p>
+          </div>
+        </div>
+
+        <!-- Text block -->
+        <div class="space-y-6">
+          <span class="text-siwinski-orange font-bold text-sm tracking-widest uppercase block">Sobre a Toldos
+            Siwinski</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-siwinski-dark leading-tight">
+            Líderes de Mercado em São Leopoldo por mais de 4 Décadas
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            Fundada sob o pilar de levar segurança, estética e vedação perfeita, a <strong>Toldos Siwinski</strong>
+            orgulha-se de ter suas soluções estampadas nas mais prestigiadas fachadas, garagens e veículos de turismo do
+            Rio Grande do Sul e de todo o Brasil.
+          </p>
+          <p class="text-slate-600 leading-relaxed">
+            Nossos produtos contam com lonas vulcanizadas com tecnologia europeia, estruturas galvanizadas que resistem
+            à ferrugem e intempéries da nossa região e suporte local e pós-venda incomparável.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 pt-4">
+            <div class="border-l-4 border-siwinski-orange pl-4">
+              <h4 class="font-extrabold text-lg text-siwinski-dark">Fabricação Própria</h4>
+              <p class="text-xs text-slate-500">Sem intermediários, melhor preço direto de fábrica.</p>
+            </div>
+            <div class="border-l-4 border-siwinski-orange pl-4">
+              <h4 class="font-extrabold text-lg text-siwinski-dark">Certificações NR35</h4>
+              <p class="text-xs text-slate-500">Equipe totalmente segura e certificada para qualquer altura.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER / MAPS / CONTATO REAL -->
+  <footer class="bg-siwinski-dark text-white pt-20 pb-10 border-t border-white/5 relative">
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-white/5">
+
+      <!-- Branding -->
+      <div class="md:col-span-4 space-y-6">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center">
+            <img src="img/logo.png">
+          </div>
+          <div>
+            <span class="font-bold text-xl tracking-tight text-white block">TOLDOS <span
+                class="text-siwinski-orange">SIWINSKI</span></span>
+            <span class="text-[9px] uppercase tracking-[0.2em] text-siwinski-yellow block -mt-1 font-bold">40 ANOS DE
+              TRADIÇÃO</span>
+          </div>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Criamos espaços amplos e cobertos com total profissionalismo. Líder regional "Top of Mind" com 40 anos de
+          história de sucesso no estado gaúcho.
+        </p>
+        <div class="flex space-x-3">
+          <a href="https://wa.me/5551993629386" target="_blank"
+            class="w-9 h-9 rounded-lg bg-siwinski-slate hover:bg-siwinski-orange hover:text-white transition-all flex items-center justify-center text-gray-400">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="https://www.instagram.com/toldossiwinski" target="_blank"
+            class="w-9 h-9 rounded-lg bg-siwinski-slate hover:bg-siwinski-orange hover:text-white transition-all flex items-center justify-center text-gray-400">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="md:col-span-3 space-y-6">
+        <h4 class="font-bold text-white text-xs tracking-wider uppercase">Navegação</h4>
+        <ul class="space-y-2 text-xs text-gray-400">
+          <li><a href="#inicio" class="hover:text-siwinski-orange transition-colors">Início</a></li>
+          <li><a href="#portfolio" class="hover:text-siwinski-orange transition-colors">Portfólio de Toldos</a></li>
+          <li><a href="#antes-depois" class="hover:text-siwinski-orange transition-colors">Antes & Depois</a></li>
+          <li><a href="#calculadora" class="hover:text-siwinski-orange transition-colors">Simulador de Custos</a></li>
+          <li><a href="#sobre" class="hover:text-siwinski-orange transition-colors">Nossa História</a></li>
+        </ul>
+      </div>
+
+      <!-- Dados Oficiais da Empresa -->
+      <div class="md:col-span-5 space-y-6">
+        <h4 class="font-bold text-white text-xs tracking-wider uppercase">Informações de Contato</h4>
+        <ul class="space-y-4 text-xs text-gray-400">
+          <li class="flex items-start space-x-3">
+            <i class="fa-solid fa-location-dot text-siwinski-orange mt-0.5"></i>
+            <span>Rua Alberto Bins, 366 - Bairro São João Batista, São Leopoldo - RS, CEP: 93022-550</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <i class="fa-solid fa-phone text-siwinski-orange"></i>
+            <a href="tel:51993629386" class="hover:text-white transition-colors">(51) 99362-9386 (WhatsApp
+              Comercial)</a>
+          </li>
+          <li class="flex items-center space-x-3">
+            <i class="fa-solid fa-envelope text-siwinski-orange"></i>
+            <span>contato@toldossiwinski.com.br</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <i class="fa-solid fa-clock text-siwinski-orange"></i>
+            <span>Aberto de Segunda a Sexta até às 17:30</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 text-center md:flex md:justify-between md:items-center text-xs text-gray-500">
+      <p>&copy; 2026 Toldos Siwinski São Leopoldo. Todos os direitos reservados. CNPJ: 12.345.678/0001-90</p>
+      <p class="mt-4 md:mt-0">O Mundo Sem Limites em Soluções Metálicas e Lonas.</p>
+    </div>
+  </footer>
+
+  <!-- INTERACTION SCRIPTS -->
+  <script>
+    // Responsive Menu Mobile
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Glassmorphism effects
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('mainHeader');
+      if (window.scrollY > 50) {
+        header.classList.add('shadow-xl', 'border-b', 'border-white/10');
+      } else {
+        header.classList.remove('shadow-xl', 'border-b', 'border-white/10');
+      }
+    });
+
+    // Custom Lead Submit
+    function handleLeadSubmit(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('leadName').value;
+      const phone = document.getElementById('leadPhone').value;
+      const product = document.getElementById('leadProduct').value;
+
+      const message =
+        `Olá Toldos Siwinski! 👋
+
+Meu nome é *${name}*
+
+📱 WhatsApp: *${phone}*
+
+Tenho interesse em:
+*${product}*
+
+Gostaria de solicitar uma visita técnica e receber um orçamento gratuito.`;
+
+      const whatsappURL = `https://wa.me/5551993629386?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappURL, '_blank');
+
+      // Popup opcional
+      document.getElementById('modalMessage').innerHTML =
+        `Olá <strong>${name}</strong>! Você será redirecionado para o WhatsApp com sua solicitação de <strong>${product}</strong>.`;
+
+      document.getElementById('successModal').classList.remove('hidden');
+
+      // Limpa formulário
+      document.getElementById('heroLeadForm').reset();
+    }
+    function closeModal() {
+      document.getElementById('successModal').classList.add('hidden');
+    }
+
+    // Before After slider logic
+    const sliderContainer = document.getElementById('sliderContainer');
+    const afterImageContainer = document.getElementById('afterImageContainer');
+    const sliderLine = document.getElementById('sliderLine');
+
+    function updateSlider(xPosition) {
+      const containerRect = sliderContainer.getBoundingClientRect();
+      let pointerX = xPosition - containerRect.left;
+
+      // Limit bounds
+      if (pointerX < 0) pointerX = 0;
+      if (pointerX > containerRect.width) pointerX = containerRect.width;
+
+      const percentage = (pointerX / containerRect.width) * 100;
+
+      // Apply widths
+      afterImageContainer.style.width = `${percentage}%`;
+      sliderLine.style.left = `${percentage}%`;
+    }
+
+    // Mouse Events
+    sliderContainer.addEventListener('mousemove', (e) => {
+      updateSlider(e.clientX);
+    });
+
+    // Touch Events for Mobile
+    sliderContainer.addEventListener('touchmove', (e) => {
+      if (e.touches[0]) {
+        updateSlider(e.touches[0].clientX);
+      }
+    });
+
+    // Photo Grid filters
+    function filterPhotos(category) {
+      const buttons = document.querySelectorAll('.photo-filter-btn');
+      buttons.forEach(btn => {
+        btn.className = "photo-filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 px-5 py-2.5 rounded-xl text-sm font-bold transition-all";
+      });
+
+      const activeBtn = document.getElementById(`btn-${category}`);
+      activeBtn.className = "photo-filter-btn active bg-siwinski-orange text-white px-5 py-2.5 rounded-xl text-sm font-bold transition-all";
+
+      const cards = document.querySelectorAll('.photo-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // Calculator logic
+    let baseM2Price = 190;
+    let selectedCategoryName = "Toldo Cortina Lona";
+
+    function setCalcCategory(category, price) {
+      baseM2Price = price;
+
+      const buttons = document.querySelectorAll('.calc-type-btn');
+      buttons.forEach(btn => {
+        btn.className = "calc-type-btn bg-slate-50 text-slate-700 border-slate-200 hover:border-slate-300 p-3.5 rounded-xl border-2 text-left transition-all duration-300";
+      });
+
+      event.currentTarget.className = "calc-type-btn active bg-siwinski-orange text-white border-siwinski-orange p-3.5 rounded-xl border-2 text-left transition-all duration-300";
+
+      if (category === 'cortina') selectedCategoryName = "Toldo Cortina Lona";
+      if (category === 'motorhome') selectedCategoryName = "Toldo p/ Motorhome";
+      if (category === 'fixo_capota') selectedCategoryName = "Toldo Fixo / Capota";
+      if (category === 'policarbonato') selectedCategoryName = "Cobertura de Policarbonato";
+
+      calculatePrice();
+    }
+
+    function calculatePrice() {
+      const width = parseFloat(document.getElementById('calcWidth').value) || 0;
+      const height = parseFloat(document.getElementById('calcHeight').value) || 0;
+      const finish = document.getElementById('calcFinish').value;
+      const structure = document.getElementById('calcStructure').value;
+
+      const area = width * height;
+      document.getElementById('calcAreaDisplay').textContent = `${area.toFixed(2)} m²`;
+
+      if (area <= 0) {
+        document.getElementById('calcPriceDisplay').textContent = "R$ 0,00";
+        return;
+      }
+
+      let totalPrice = area * baseM2Price;
+
+      // Adjustments based on selections
+      if (finish === 'com_visor') {
+        totalPrice += 150;
+      } else if (finish === 'tela_screen') {
+        totalPrice *= 1.30; // 30% more
+      }
+
+      if (structure === 'aluminio') {
+        totalPrice += 450;
+      }
+
+      const formatted = totalPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+      document.getElementById('calcPriceDisplay').textContent = formatted;
+    }
+
+    function sendCalcToWhatsapp() {
+      const width = document.getElementById('calcWidth').value;
+      const height = document.getElementById('calcHeight').value;
+      const area = (width * height).toFixed(2);
+      const price = document.getElementById('calcPriceDisplay').textContent;
+      const finish = document.getElementById('calcFinish').options[document.getElementById('calcFinish').selectedIndex].text;
+      const structure = document.getElementById('calcStructure').options[document.getElementById('calcStructure').selectedIndex].text;
+
+      const message = `Olá Toldos Siwinski! Realizei uma simulação no site:\n\n` +
+        `• Tipo: *${selectedCategoryName}*\n` +
+        `• Medidas: *${width}m x ${height}m* (${area} m²)\n` +
+        `• Acabamento: *${finish}*\n` +
+        `• Estrutura: *${structure}*\n` +
+        `• Preço estimado: *${price}*\n\n` +
+        `Gostaria de agendar uma visita sem compromisso em São Leopoldo para fechar o projeto.`;
+
+      window.open(`https://wa.me/5551993629386?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    // Init calc
+    window.onload = function () {
+      calculatePrice();
+    };
+  </script>
+</body>
+
+</html>
